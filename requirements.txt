@@ -1,0 +1,12 @@
+torch>=2.0.0
+transformers>=4.42.0
+datasets
+peft
+accelerate
+evaluate
+scikit-learn
+streamlit
+pandas
+plotly
+tabulate
+numpy
