@@ -1,0 +1,4 @@
+Method,Accuracy,Trainable Params,Param %,Training Time (s)
+Full Fine-tuning (Baseline),,109482240,100.00%,
+LoRA,0.5,296450,0.2700%,200.97
+IA3,0.65,66050,0.0603%,171.79
