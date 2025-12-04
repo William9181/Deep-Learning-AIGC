@@ -3,14 +3,12 @@ import pandas as pd
 import plotly.express as px
 import torch
 import torch.nn.functional as F
-from transformers import (
-    AutoTokenizer, 
-    AutoModelForSequenceClassification, 
-    Trainer, 
-    TrainingArguments,
-    DataCollatorWithPadding,
-    TrainerCallback
-)
+# ✅ 修改後的寫法 (拆開來匯入)
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, DataCollatorWithPadding
+# 關鍵：直接從子模組匯入 Trainer，避開 transformers 主入口的檢查
+from transformers.trainer import Trainer
+from transformers.training_args import TrainingArguments
+from transformers.trainer_callback import TrainerCallback
 from datasets import load_dataset
 from peft import PeftModel, LoraConfig, IA3Config, TaskType, get_peft_model
 import os
@@ -284,4 +282,5 @@ elif app_mode == "📊 參數量視覺化分析":
             fig_linear.update_traces(textposition='outside')
             st.plotly_chart(fig_linear, use_container_width=True)
         
+
         st.markdown("### 詳細數據"); st.dataframe(df)
