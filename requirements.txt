@@ -1,10 +1,11 @@
-streamlit
 torch
-transformers
-peft
+transformers[torch]
+accelerate>=0.26.0
 datasets
+peft
+evaluate
+scikit-learn
+streamlit
 pandas
 plotly
-scikit-learn
-accelerate
-evaluate
+tabulate
