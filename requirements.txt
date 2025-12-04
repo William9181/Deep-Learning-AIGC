@@ -1,14 +1,16 @@
-# 指定穩定的基礎套件
+# 指定 PyTorch 的 CPU 版本下載源，檔案小很多，安裝穩
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch
+torchvision
+torchaudio
+transformers
+accelerate>=0.21.0
+datasets
+peft
+evaluate
+scikit-learn
 streamlit
 pandas
 plotly
 tabulate
-scikit-learn
-
-# 深度學習相關 (不使用 [torch] 語法，改為分開列出以確保安裝順序)
-torch>=2.0.0
-accelerate>=0.21.0
-transformers>=4.30.0
-datasets
-peft
-evaluate
