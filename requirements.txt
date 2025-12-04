@@ -1,11 +1,14 @@
-torch
-transformers[torch]
-accelerate>=0.26.0
-datasets
-peft
-evaluate
-scikit-learn
+# 指定穩定的基礎套件
 streamlit
 pandas
 plotly
 tabulate
+scikit-learn
+
+# 深度學習相關 (不使用 [torch] 語法，改為分開列出以確保安裝順序)
+torch>=2.0.0
+accelerate>=0.21.0
+transformers>=4.30.0
+datasets
+peft
+evaluate
