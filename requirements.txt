@@ -1,12 +1,17 @@
-# 指定 PyTorch 的 CPU 版本下載源，檔案小很多，安裝穩
 --extra-index-url https://download.pytorch.org/whl/cpu
 
-torch
+# 深度學習核心 (指定 CPU 源以節省記憶體)
+torch>=2.0.0
 torchvision
 torchaudio
-transformers
+
+# 關鍵修正：強制鎖定 pyarrow 版本，解決 AttributeError
+pyarrow==14.0.1
+
+# 其他依賴
+transformers>=4.30.0
 accelerate>=0.21.0
-datasets
+datasets>=2.14.0
 peft
 evaluate
 scikit-learn
